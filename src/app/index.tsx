@@ -13,30 +13,30 @@ const Index = (): JSX.Element => {
 
       <View>
 
-        <View>
+        <View style={styles.memoListItem}>
           <View>
-            <Text>買い物リスト</Text>
-            <Text>2023年10月1日 10:00</Text>
+            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+            <Text style={styles.memoListItemDate}>2023年10月1日 10:00</Text>
           </View>
           <View>
             <Text>X</Text>
           </View>
         </View>
 
-        <View>
+        <View style={styles.memoListItem}>
           <View>
-            <Text>買い物リスト</Text>
-            <Text>2023年10月1日 10:00</Text>
+            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+            <Text style={styles.memoListItemDate}>2023年10月1日 10:00</Text>
           </View>
           <View>
             <Text>X</Text>
           </View>
         </View>
 
-        <View>
+        <View style={styles.memoListItem}>
           <View>
-            <Text>買い物リスト</Text>
-            <Text>2023年10月1日 10:00</Text>
+            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+            <Text style={styles.memoListItemDate}>2023年10月1日 10:00</Text>
           </View>
           <View>
             <Text>X</Text>
@@ -78,6 +78,25 @@ const styles = StyleSheet.create({
     lineHeight: 32,
     fontWeight: 'bold',
     color: '#ffffff'
+  },
+  memoListItem: {
+    backgroundColor: '#ffffff',
+    flexDirection: 'row', // 本来は縦方向のものを横方向にする
+    justifyContent: 'space-between',
+    paddingVertical: 16,
+    paddingHorizontal: 19,
+    alignItems: 'center', // flexDirection: 'row'で横方向になっているため、alignItemsは横方向から縦方向の指定になる
+    borderBottomWidth: 1,
+    borderColor: 'rgba(0,0,0,0.15)'
+  },
+  memoListItemTitle: {
+    fontSize: 16,
+    lineHeight: 32
+  },
+  memoListItemDate: {
+    fontSize: 12,
+    lineHeight: 16,
+    color: '#848484'
   }
 })
 
